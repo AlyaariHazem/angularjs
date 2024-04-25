@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+<body>
+    <label for="user"></label>
+    <input type="text" id="user" name="user" ng-model="user">
+  
+    <h1>my Name is {{user}}</h1>
+
+    <div  ng-controller="Mycontroller">
+        <div ng-repeat="student in students">
+            <p> programmer is {{student.name}}</p>
+            <p> His Age is {{student.gender}}</p>
+            <p> His Age is {{student.english}}</p>
+            <p> from : {{student.physics}}</p>
+            <p> from : {{student.maths}}</p>
+         </div>
+    </div>
+</body>
+</html>
