@@ -1,10 +1,10 @@
 var myapp = angular.module('myapp', []);
 
-myapp.controller('Mycontroller', function fanController($scope, $http) {
+myapp.controller('Mycontroller',['$scope', '$http', function fanController($scope, $http) {
     $http.get('../student-data.json').then(function(response) {
         $scope.students = response.data;
     });
-});
+}]);
     // $scope.disstudents=[
     //     {  
     //         'name':'Hazem',
